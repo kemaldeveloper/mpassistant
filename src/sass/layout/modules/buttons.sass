@@ -1,27 +1,30 @@
 .btn
-	position: relative
-	display: inline-block
-	font-size: 14px
-	border-radius: 4px
-	color: #fff
-	text-align: center
-	text-decoration: none
-	padding: 10px 30px
-	background-color: $c1
-	border: none
-	outline: none
-	transition: all .3s ease
-	user-select: none
-	&:focus:not(.disabled),
-	&:hover:not(.disabled)
-		outline: none
-		cursor: pointer
-		color: #fff
-		text-decoration: none
-		background-color: lighten($c1, 10%)
+  position: relative
+  display: inline-block
 
-	&:active:not(.disabled)
-		background-color: darken($c1, 5%)
+  font-size: 18px
+  font-weight: 400
+  line-height: 125%
+  letter-spacing: 0.36px
 
-	&.disabled
-		opacity: .4
+  color: $white
+  background: $accent-gt
+
+  border-radius: 30px
+  text-align: center
+  text-decoration: none
+  border: none
+  outline: none
+  transition: all .3s ease
+  user-select: none
+  &:focus:not(.disabled),
+  &:hover:not(.disabled)
+    outline: none
+    cursor: pointer
+    color: #fff
+    text-decoration: none
+
+  &:active:not(.disabled)
+
+  &.disabled
+    opacity: .4
