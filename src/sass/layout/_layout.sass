@@ -2,13 +2,23 @@ body
   min-width: 320px
   position: relative
   font-family: $deff
-  line-height: 1.65
+  // line-height: 1.65
   overflow-x: hidden
   -webkit-font-smoothing: antialiased
 
 html,
 body
   font-size: 16px
+  height: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow-x: hidden
+
+.main
+  flex: 1 1 auto
 
 ::-webkit-scrollbar
   width: 0
@@ -20,3 +30,4 @@ body
 @import modules/popups
 @import modules/mfp-zoom
 @import modules/nav-menu
+@import modules/try
