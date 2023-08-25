@@ -161,3 +161,18 @@ const initServicesTabs = () => {
 };
 
 initServicesTabs();
+
+function filterBtnSwitcher() {
+  const filterBtn = $('.filter-btn');
+  const filterBtnParent = $('.filter');
+
+  filterBtnParent.find(filterBtn.first()).addClass('active');
+
+  filterBtn.on('click', function (e) {
+    e.preventDefault();
+    filterBtn.closest(filterBtnParent).find(filterBtn).removeClass('active');
+    $(this).addClass('active');
+  });
+}
+
+filterBtnSwitcher();
