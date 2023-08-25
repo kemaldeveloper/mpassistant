@@ -137,3 +137,27 @@ const mfpPopup = function (popupID, source) {
     // }
   });
 };
+
+const initServicesTabs = () => {
+  const tabLink = $('.tab-nav__link');
+  const tabContentItem = $('.tab-content__item');
+
+  tabContentItem.not(tabContentItem.first()).hide();
+
+  tabLink.first().addClass('tab-nav__link--active');
+
+  tabLink.on('click', (e) => {
+    e.preventDefault();
+    const currentElement = $(e.currentTarget);
+    const id = currentElement.attr('href').replace('#', '');
+    const currentTabContentItem = $(`.tab-content__item[data-id='${id}']`);
+
+    currentElement.closest('.tab-nav__wrap').find('.tab-nav__link').removeClass('tab-nav__link--active');
+    currentElement.addClass('tab-nav__link--active');
+
+    tabContentItem.not(currentTabContentItem).fadeOut(0);
+    currentTabContentItem.fadeIn(500);
+  });
+};
+
+initServicesTabs();
