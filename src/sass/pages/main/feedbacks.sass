@@ -1,0 +1,62 @@
+.feedbacks
+  padding-top: 86px
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+
+  &__title
+
+  &__btns
+    display: flex
+    column-gap: 34px
+
+  &__content
+
+  &__item
+    background: url("../assets/images/feedbacks/quote.png") 45px 45px no-repeat, linear-gradient(0deg, #EAF3FD 0%, #EAF3FD 100%), #2A84EE
+    border-radius: 10px
+    padding: 50px 50px 45px 49px
+    min-height: 445px
+
+  &__text
+    font-size: 22px
+    font-weight: 400
+    line-height: 125%
+    letter-spacing: 0.44px
+    color: $gray
+    position: relative
+
+  &__text p
+    transition: all 0.3s ease
+
+  &__text.active p
+    display: -webkit-box
+    overflow: hidden
+    -webkit-line-clamp: 9
+    -webkit-box-orient: vertical
+
+  &__text.active
+    &::after
+      content: ''
+      position: absolute
+      bottom: -20px
+      right: 0
+      left: 0
+      height: 100px
+      width: 100%
+      border-radius: 10px
+      background: linear-gradient(180deg, rgba(234, 243, 253, 0.00) 0%, #EAF3FD 50.52%)
+
+  &__person
+    font-size: 26px
+    font-weight: 700
+    line-height: 125%
+    letter-spacing: 0.52px
+    color: $black
+
+.feedbacks-next
+
+.feedbacks-prev
