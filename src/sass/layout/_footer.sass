@@ -1,3 +1,120 @@
 .footer
-	padding: 16px 0
-	background: #eee
+  background: $bg-gray
+  padding-top: 60px
+  padding-bottom: 56px
+
+  &__content
+    display: flex
+    justify-content: space-between
+
+  &__col
+
+  &__nav-wrap
+    padding-right: 23px
+    margin-bottom: 48px
+
+  &__logo-wrap
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    margin-bottom: 32px
+
+  &__social
+    display: flex
+    align-items: center
+    column-gap: 15px
+    margin-bottom: 61px
+
+  &__decription
+    color: $gray
+    font-size: 20px
+    font-weight: 400
+    line-height: 125%
+    letter-spacing: 0.4px
+    display: flex
+    flex-direction: column
+    row-gap: 15px
+
+  &__decription span:nth-child(2)
+    max-width: 380px
+
+  &__box
+
+  &__social-banks
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    column-gap: 25px
+    margin-bottom: 48px
+
+  &__social-banks img:nth-child(1)
+    width: 156px
+    height: 42px
+
+  &__social-banks img:nth-child(2)
+    width: 73px
+    height: 30px
+
+  &__social-banks img:nth-child(3)
+    width: 49px
+    height: 30px
+
+  &__social-banks img:nth-child(4)
+    width: 49px
+    height: 30px
+
+  &__social-banks img:nth-child(5)
+    width: 79px
+    height: 22px
+
+  &__social-redesign
+    display: flex
+    justify-content: flex-end
+    column-gap: 3px
+
+  &__social-redesign span
+    font-size: 20px
+    font-weight: 400
+    line-height: 125%
+    letter-spacing: 0.4px
+    color: $gray
+
+  &__social-redesign a
+    font-size: 20px
+    font-weight: 700
+    line-height: 125%
+    letter-spacing: 0.4px
+    color: $green
+
+  &__description
+
+.footer-nav
+  display: flex
+
+  & ul:nth-child(1)
+    margin-right: 127px
+
+  & ul:nth-child(2)
+    margin-right: 149px
+
+  &__list
+    display: flex
+    flex-direction: column
+    row-gap: 17px
+
+  &__list li span
+    font-size: 22px
+    font-weight: 700
+    line-height: 125%
+    letter-spacing: 0.44px
+    color: $black
+
+  &__list li a
+    font-weight: 400
+    font-size: 22px
+    line-height: 125%
+    letter-spacing: 0.44px
+    color: $gray
+    &:hover
+      +min_md
+        color: $hover
