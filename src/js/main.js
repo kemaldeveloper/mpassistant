@@ -28,10 +28,6 @@ const MQ = {
 
 MQ.updateState();
 
-$(document).ready(function () {
-  //
-});
-
 $(window).on('load', function () {
   //
 });
@@ -176,3 +172,50 @@ function filterBtnSwitcher() {
 }
 
 filterBtnSwitcher();
+
+new Swiper('.swiper', {
+  slidesPerView: 2,
+  spaceBetween: 40,
+  autoHeight: false,
+  navigation: {
+    nextEl: '.feedbacks-next',
+    prevEl: '.feedbacks-prev',
+  },
+});
+
+const text = $('.feedbacks__text p');
+
+const textHide = () => {
+  text.each(function (i, item) {
+    const currentText = item.textContent.length;
+
+    if (currentText > 400) {
+      $(item).parent().addClass('active');
+      $(item).closest('.feedbacks__item').find('.feedbacks__text').after('<span id="moreText">Читать полностью</span>');
+    }
+  });
+};
+
+textHide();
+
+const textShow = () => {
+  text.each(function (i, item) {
+    const moreTextBtn = $(item).closest('.feedbacks__item').find('#moreText');
+
+    moreTextBtn.on('click', function () {
+      if ($(item).parent().hasClass('active')) {
+        $(item).parent().removeClass('active');
+        $(this).addClass('active');
+        $(this).text('Скрыть');
+      } else {
+        $(item).parent().addClass('active');
+        $(this).removeClass('active');
+        $(this).text('Читать полностью');
+      }
+    });
+  });
+};
+
+$(document).ready(function () {
+  textShow();
+});

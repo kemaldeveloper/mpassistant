@@ -84,3 +84,33 @@
   height: 23px
   fill: $green
   transition: all 0.3s ease
+
+.feedbacks-next
+
+.feedbacks-prev
+
+#moreText
+  display: inline-block
+  color: #2EB897
+  font-size: 24px
+  font-weight: 400
+  line-height: 125%
+  letter-spacing: 0.48px
+  position: relative
+  padding-right: 20px
+  margin: 17px 0 23px
+  cursor: pointer
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-30%) rotate(-45deg)
+    border: 2px solid $green
+    border-width: 0 0 2px 2px
+    width: 8px
+    height: 8px
+
+#moreText.active
+  &::after
+    transform: translateY(-13%) rotate(135deg)
