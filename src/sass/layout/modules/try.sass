@@ -7,6 +7,13 @@
   padding: 44px 41px 50px 37px
   background: url("../assets/images/advantages/advantages-bg-1.png") top left no-repeat, url("../assets/images/advantages/advantages-bg-2.png") top right no-repeat, linear-gradient(134deg, #11AE88 0%, #2A84EE 73.23%), #2EB897
 
+  &--modified
+    +xl
+      padding-bottom: 275px
+    +sm
+      background: url("../assets/images/advantages/advantages-bg-1.png") top left no-repeat, url("../assets/images/advantages/advantages-bg-2.png") bottom right no-repeat, linear-gradient(134deg, #11AE88 0%, #2A84EE 73.23%), #2EB897
+      padding: 35px 20px 218px 20px
+
   &__title
     font-size: 46px
     font-weight: 700
@@ -14,6 +21,14 @@
     letter-spacing: 0.92px
     color: $white
     margin-bottom: 33px
+    +md
+      font-size: 36px
+    +sm
+      font-size: 21px
+      line-height: 115%
+      letter-spacing: 0.42px
+      max-width: 260px
+      margin-bottom: 21px
 
   &__text
     max-width: 600px
@@ -74,3 +89,35 @@
     position: absolute
     right: 14%
     bottom: 0
+    +xl
+      left: 50%
+      right: 0
+      transform: translateX(-50%)
+
+  &__img--small
+    +xxxl
+      max-width: 430px
+      right: 10%
+    +xxl
+      max-width: 320px
+      right: 4%
+    +md
+      width: 315px
+    +sm
+      width: 260px
+
+  &__img--big
+    bottom: -23%
+    +xxxl
+      max-width: 475px
+      bottom: -63px
+      right: 7%
+    +xxl
+      max-width: 350px
+      bottom: -46px
+      right: 2%
+    +md
+      width: 350px
+    +sm
+      bottom: -40px
+      width: 305px
