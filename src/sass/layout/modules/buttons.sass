@@ -33,8 +33,8 @@
     z-index: -1
     transition: all 0.3s ease
   &:hover
+    color: #fff
     +min_md
-      color: #fff
       &::after
         opacity: 0
         visibility: hidden
@@ -56,6 +56,12 @@
     background: $green
     border-color: transparent
     color: $white
+  +xl
+    padding: 9px 64px
+  +sm
+    font-size: 16px
+    letter-spacing: 0.32px
+    padding: 8px 35px
 
 .filter-btn.active
   background: $green
@@ -77,10 +83,13 @@
   border-radius: 30px
   border: 1px solid $green
   &:hover
-    background: $green
-    color: $white
-    .icon
-      fill: $white
+    +min_md
+      color: $white
+      background: $green
+      .icon
+        fill: $white
+    +md
+      color: $black
 
 .more-btn .icon
   width: 22px
