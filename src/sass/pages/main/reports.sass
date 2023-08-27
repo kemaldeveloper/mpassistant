@@ -1,6 +1,9 @@
 .reports
   padding-top: 72px
   padding-bottom: 50px
+  +sm
+    padding-top: 56px
+    padding-bottom: 28px
 
   &__title
     margin-bottom: 27px
@@ -9,6 +12,11 @@
   &__content
     display: flex
     justify-content: space-between
+    +xl
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      row-gap: 35px
 
   &__col
 
@@ -19,6 +27,11 @@
     letter-spacing: 0.52px
     color: #707070
     margin-bottom: 33px
+    +md
+      font-size: 22px
+    +sm
+      font-size: 18px
+      letter-spacing: 0.36px
 
   &__box
     display: flex
@@ -32,6 +45,13 @@
     background: #EAF3FD
     border-radius: 10px
     padding: 32px 41px 32px 41px
+    +xxl
+      padding: 25px
+      max-width: 610px
+    +xl
+      max-width: 100%
+    +sm
+      padding: 20px 20px 28px
 
   &__item .icon
     width: 26px
@@ -39,13 +59,37 @@
     fill: $blue
     flex-shrink: 0
     margin-right: 17px
+    +sm
+      width: 20px
+      height: 20px
+      margin-right: 9px
 
   &__text
-    color: #212121
+    color: $black
     font-size: 26px
     font-weight: 400
     line-height: 125%
     letter-spacing: 0.52px
+    +xxl
+      font-size: 20px
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &__img
     max-width: 690px
+    +xxxl
+      display: flex
+      justify-content: center
+      align-items: center
+      max-width: 530px
+    +xxl
+      max-width: 470px
+
+  &__img img:first-child
+    +sm
+      display: none
+
+  &__img img:last-child
+    +min_sm
+      display: none
