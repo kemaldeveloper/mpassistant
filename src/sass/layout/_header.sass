@@ -2,17 +2,40 @@
   padding: 24px 0
 
   &__content
-    display: flex
-    align-items: center
-    justify-content: space-between
-    padding-left: 1px
+    +min_lg
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-left: 1px
 
   &__box
     display: flex
     align-items: center
 
+  &__box
+    .nav-menu
+      +lg
+        display: none
+
+    .header__btn
+      +lg
+        display: none
+
+    .log-link
+      +lg
+        display: none
+
   &__box:nth-child(1)
     column-gap: 110px
+    +xxxl
+      column-gap: 25px
+    +xxl
+      column-gap: 150px
+    +xl
+      column-gap: 50px
+    +lg
+      column-gap: 0
+      justify-content: space-between
 
   &__box:nth-child(2)
     column-gap: 30px
@@ -22,5 +45,18 @@
     align-items: center
     column-gap: 30px
 
+    .logo
+      display: block
+      width: 260px
+      flex-shrink: 0
+      +xxl
+        width: 180px
+
+    .logo__description
+      +xxl
+        display: none
+
   &__btn
     padding: 9.8px 36.1px
+    +xxl
+      padding: 9px 26px
