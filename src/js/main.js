@@ -216,6 +216,15 @@ const textShow = () => {
   });
 };
 
+const collapse = () => {
+  const collapseTitle = $('.collapse__title');
+  collapseTitle.on('click', function () {
+    $(this).toggleClass('active').next().slideToggle(300);
+    $(this).parent().toggleClass('active');
+  });
+};
+
 $(document).ready(function () {
   textShow();
+  collapse();
 });
