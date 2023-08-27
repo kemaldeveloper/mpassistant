@@ -1,14 +1,26 @@
 .nav-menu
+  +lg
+    margin-bottom: 270px
 
   &__list
     display: flex
     column-gap: 68px
+    +xxl
+      column-gap: 45px
+    +lg
+      flex-direction: column
+      row-gap: 42px
 
   &__list li
     font-size: 18px
     font-weight: 400
     line-height: 125%
     letter-spacing: 0.36px
+    +lg
+      font-size: 24px
+      font-weight: 700
+      line-height: 115%
+      letter-spacing: 0.48px
 
   &__list li a
     color: $black

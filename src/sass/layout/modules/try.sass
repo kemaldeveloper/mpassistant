@@ -25,6 +25,9 @@
     line-height: 125%
     letter-spacing: 0.42px
     color: $white
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &-form
 
@@ -34,6 +37,11 @@
       display: flex
       column-gap: 14px
       padding: 5px
+      +md
+        background: transparent
+        flex-direction: column
+        padding: 0
+        row-gap: 20px
 
     &-input
       width: 414px
@@ -45,12 +53,22 @@
       letter-spacing: 0.4px
       border-radius: 30px
       padding-left: 20px
+      padding-right: 15px
+      background: $white
+      +lg
+        width: 336px
+        font-size: 16px
+      +md
+        padding: 14px 20px 14px 20px
+        width: 100%
 
     &-input::placeholder
       color: #C3C3C3
 
     &-btn
       padding: 10px 72.5px
+      +md
+        padding: 12.5px 40px
 
   &__img
     position: absolute

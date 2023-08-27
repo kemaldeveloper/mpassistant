@@ -44,12 +44,19 @@ $('.js-popup').on('click', function (event) {
   let popupID = $(this).attr('href');
 
   mfpPopup(popupID);
+  $('.js-menu').removeClass('is-active');
+  $('.menu').removeClass('is-opened');
 });
 
 // Mobile menu toggle
 $('.js-menu').on('click', function () {
   $(this).toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
+});
+
+$('.menu-hamburger').on('click', function () {
+  $('.js-menu').removeClass('is-active');
+  $('.menu').removeClass('is-opened');
 });
 
 // Phone input mask

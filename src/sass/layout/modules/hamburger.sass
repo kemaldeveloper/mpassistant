@@ -1,0 +1,20 @@
+.hamburger
+  +min_lg
+    display: none
+
+.hamburger-box
+  width: 29px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+  background: $accent-gt
+  height: 4px
+
+.hamburger-inner, .hamburger-inner::before
+  width: 29px
+
+.hamburger--slider.is-active .hamburger-inner::after
+  width: 29px
+
+.hamburger-inner::after
+  width: 14px
+  right: 0

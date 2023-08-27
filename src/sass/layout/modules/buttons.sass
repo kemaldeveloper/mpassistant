@@ -17,6 +17,8 @@
   user-select: none
   z-index: 1
   background: $hover
+  +xxl
+    font-size: 16px
 
   &::after
     content: ''
@@ -31,10 +33,11 @@
     z-index: -1
     transition: all 0.3s ease
   &:hover
-    color: #fff
-    &::after
-      opacity: 0
-      visibility: hidden
+    +min_md
+      color: #fff
+      &::after
+        opacity: 0
+        visibility: hidden
 
 .filter-btn
   display: flex
