@@ -5,6 +5,10 @@
     border-radius: 10px
     background: linear-gradient(45deg, #FFF1D7 0%, #FFB57F 100%)
     padding: 48px 20px 50px 39px
+    +lg
+      padding-bottom: 365px
+    +sm
+      padding: 35px 20px 210px
 
   &__col
 
@@ -15,6 +19,11 @@
     letter-spacing: 0.52px
     color: $black
     margin-bottom: 10px
+    +sm
+      font-size: 20px
+      letter-spacing: 0.4px
+      max-width: 235px
+      margin-bottom: 22px
 
   &__price
     font-size: 22px
@@ -22,6 +31,10 @@
     line-height: 125%
     letter-spacing: 0.44px
     color: $gray
+    +sm
+      font-size: 18px
+      letter-spacing: 0.36px
+      margin-bottom: 13px
 
   &__free
     font-size: 30px
@@ -30,17 +43,29 @@
     letter-spacing: 0.6px
     color: $blue
     margin-bottom: 24px
+    +sm
+      font-size: 26px
+      letter-spacing: 0.52px
+      margin-bottom: 30px
 
   &__btns
     display: inline-flex
     flex-direction: column
     row-gap: 21px
+    +sm
+      display: flex
 
     .btn
       padding: 12px 154px
+      +xl
+        padding: 12px 115px
+      +sm
+        padding: 11px 50px
 
     .more-btn
       padding: 12px 50px
+      +sm
+        padding: 8.5px 50px
 
   &__images img
     position: absolute
@@ -48,11 +73,50 @@
   &__images img:nth-child(1)
     right: 44%
     top: 20%
+    +xxl
+      right: 41%
+    +xl
+      max-width: 180px
+      right: 40%
+    +lg
+      top: auto
+      right: auto
+      bottom: 9%
+      left: 19%
+    +md
+      left: 7%
+    +sm
+      left: 20%
+      max-width: 90px
 
   &__images img:nth-child(2)
     right: 24%
     bottom: 0
+    +xxl
+      max-width: 220px
+      right: 22%
+    +xl
+      max-width: 205px
+      right: 19%
+    +lg
+      right: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 1
+    +sm
+      max-width: 115px
 
   &__images img:nth-child(3)
     top: 25%
     right: -23px
+    +xl
+      max-width: 180px
+    +lg
+      top: auto
+      bottom: 0
+      right: 17%
+    +md
+      right: 4%
+    +sm
+      right: 15%
+      max-width: 100px
