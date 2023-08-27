@@ -6,6 +6,11 @@
     padding: 39px 53px 47px 43px
     border-radius: 10px
     column-gap: 27px
+    +lg
+      flex-direction: column
+      row-gap: 40px
+    +sm
+      padding: 40px 20px
 
   &__item
 
@@ -15,6 +20,8 @@
     line-height: 125%
     letter-spacing: 1.4px
     color: $blue
+    +xl
+      font-size: 55px
 
   &__item-text
     color: $gray
@@ -22,3 +29,8 @@
     font-weight: 400
     line-height: 125%
     letter-spacing: 0.44px
+    +xl
+      font-size: 18px
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
