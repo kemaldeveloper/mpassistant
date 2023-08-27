@@ -1,0 +1,46 @@
+.checkbox
+  display: flex
+
+.checkbox-label
+  position: relative
+  height: 30px
+  cursor: pointer
+
+  input
+    display: none
+
+  input:checked + .checkbox-custom::after
+    opacity: 1
+
+.checkbox-custom
+  border-radius: 4px
+  border: 1px solid #CEDFF4
+  display: block
+  width: 30px
+  height: 30px
+  position: relative
+
+.checkbox-custom::after
+  content: ''
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url("../assets/images/check.svg")
+  width: 19px
+  height: 14px
+  opacity: 0
+  z-index: 2
+
+.checkbox-description
+  font-size: 20px
+  font-weight: 400
+  line-height: 125%
+  letter-spacing: 0.4px
+  color: $gray
+  padding-left: 18px
+  margin-bottom: 57px
+
+  a
+    color: $gray
+    text-decoration: underline

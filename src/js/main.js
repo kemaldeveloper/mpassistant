@@ -53,10 +53,10 @@ $('.js-menu').on('click', function () {
 });
 
 // Phone input mask
-$('input[type="tel"]').inputmask({
-  mask: '+7 (999) 999-99-99',
-  showMaskOnHover: false,
-});
+// $('input[type="tel"]').inputmask({
+//   mask: '+7 (999) 999-99-99',
+//   showMaskOnHover: true,
+// });
 
 // E-mail Ajax Send
 // $('form').on('submit',function (e) {
@@ -113,7 +113,6 @@ $('input[type="tel"]').inputmask({
 // });
 
 const mfpPopup = function (popupID, source) {
-  // https://dimsemenov.com/plugins/magnific-popup/
   $.magnificPopup.open({
     items: { src: popupID },
     type: 'inline',
@@ -124,7 +123,7 @@ const mfpPopup = function (popupID, source) {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
+    closeMarkup: '<button type="button" class="mfp-close"><img src="assets/images/close.svg" alt=""></button>',
     mainClass: 'mfp-fade-zoom',
     // callbacks: {
     // 	open: function() {
@@ -224,7 +223,21 @@ const collapse = () => {
   });
 };
 
+const showPassword = () => {
+  const showBtn = $('.show-btn');
+  const passwordInput = $('.password-input');
+
+  showBtn.on('click', function () {
+    if (passwordInput.attr('type') === 'password') {
+      passwordInput.attr('type', 'text');
+    } else {
+      passwordInput.attr('type', 'password');
+    }
+  });
+};
+
 $(document).ready(function () {
   textShow();
   collapse();
+  showPassword();
 });

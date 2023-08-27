@@ -74,27 +74,82 @@
 </footer>
 
 <!-- Request popup -->
-<div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
-  <div class="mfp__title">Оставьте заявку</div>
-  <div class="mfp__desc">менеджер свяжется с Вами в течение 3 часов</div>
+<div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="registration">
+  <div class="mfp__title">Регистрация</div>
+  <div class="mfp__desc">У вас нет аккаунта? Создайте свой аккаунт, это займет меньше минуты.</div>
 
   <form class="mfp__form">
-    <div class="input-wrap">
-      <input type="text" name="name" data-name="Имя" placeholder="Имя" />
-    </div>
-    <div class="input-wrap">
-      <input type="tel" name="phone" data-name="Телефон" placeholder="Телефон" required="required" />
-    </div>
-    <div class="input-wrap">
-      <input type="email" name="email" data-name="Почта" placeholder="Почта" />
-    </div>
-    <button class="btn">Send</button>
-
-    <div class="form-result">
-      <div class="mess">
-        <div class="mess__title">Success!</div>
-        <div class="mess__desc">We will contact with you soon</div>
+    <div class="mfp__form-col">
+      <div class="input-wrap">
+        <span>ФИО</span>
+        <input class="mfp__form-input" type="text" name="name" data-name="Имя" placeholder="Введите ваши ФИО" />
       </div>
+      <div class="input-wrap">
+        <span>Номер телефона</span>
+        <input
+          class="mfp__form-input"
+          type="tel"
+          name="phone"
+          data-name="Телефон"
+          placeholder="Введите ваш номер телефона"
+          required="required"
+        />
+      </div>
+      <div class="input-wrap">
+        <span>Ваш email</span>
+        <input type="email" name="email" data-name="Почта" placeholder="Введите ваш email" />
+      </div>
+      <div class="log">
+        <span class="log-desc">Уже есть аккаунт?</span>
+        <a href="#" class="log-link">
+          <img src="assets/images/log.svg" alt="" />
+          <span>Вход</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mfp__form-col">
+      <div class="input-wrap">
+        <span>Пароль</span>
+        <div class="password-wrap">
+          <input
+            class="password-input"
+            type="password"
+            name="password"
+            data-name="Пароль"
+            placeholder="Введите пароль"
+          />
+          <div class="show-btn">
+            <img src="assets/images/show.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="input-wrap">
+        <span>Промокод</span>
+        <div class="promocode-wrap">
+          <input
+            class="promocode-input"
+            type="promocode"
+            name="promocode"
+            data-name="Промокод"
+            placeholder="Введите промокод"
+          />
+          <button class="promocode-btn btn">Применить</button>
+        </div>
+      </div>
+      <div class="checkbox">
+        <label class="checkbox-label">
+          <input type="checkbox" name="checkbox" />
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="checkbox-description">
+          <span>Я согласен со всеми условиями </span>
+          <a href="#">пользовательского соглашения</a>
+          <span>и</span>
+          <a href="#">политики конфиденциальности</a>
+        </div>
+      </div>
+      <button class="mfp__form-submit btn" type="submit">Получить бесплатный доступ</button>
     </div>
   </form>
 </div>
