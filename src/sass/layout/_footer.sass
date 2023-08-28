@@ -2,10 +2,26 @@
   background: $bg-gray
   padding-top: 60px
   padding-bottom: 56px
+  +sm
+    padding-top: 50px
+    padding-bottom: 50px
 
   &__content
+    // display: flex
+    // justify-content: space-between
+
+  &__top-row
     display: flex
     justify-content: space-between
+    +xl
+      flex-direction: column
+
+  &__bottom-row
+    display: flex
+    justify-content: space-between
+    +xl
+      flex-direction: column-reverse
+      row-gap: 27px
 
   &__col
 
@@ -19,11 +35,19 @@
     row-gap: 12px
     margin-bottom: 32px
 
+    .logo
+      +sm
+        width: 187px
+
   &__social
     display: flex
     align-items: center
     column-gap: 15px
     margin-bottom: 61px
+
+    a
+      +sm
+        width: 52px
 
   &__decription
     color: $gray
@@ -35,6 +59,10 @@
     flex-direction: column
     row-gap: 15px
 
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
+
   &__decription span:nth-child(2)
     max-width: 380px
 
@@ -42,10 +70,13 @@
 
   &__social-banks
     display: flex
-    justify-content: flex-end
     align-items: center
     column-gap: 25px
     margin-bottom: 48px
+    +md
+      flex-wrap: wrap
+      row-gap: 12px
+      column-gap: 15px
 
   &__social-banks img:nth-child(1)
     width: 156px
@@ -69,7 +100,6 @@
 
   &__social-redesign
     display: flex
-    justify-content: flex-end
     column-gap: 3px
 
   &__social-redesign span
@@ -78,6 +108,9 @@
     line-height: 125%
     letter-spacing: 0.4px
     color: $gray
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &__social-redesign a
     font-size: 20px
@@ -85,17 +118,38 @@
     line-height: 125%
     letter-spacing: 0.4px
     color: $green
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &__description
 
 .footer-nav
   display: flex
+  +xl
+    flex-wrap: wrap
+    justify-content: space-between
+    row-gap: 40px
+  +sm
+    flex-direction: column
 
   & ul:nth-child(1)
     margin-right: 127px
+    +xxxl
+      margin-right: 80px
+    +xxl
+      margin-right: 70px
+    +xl
+      margin-right: 0
 
   & ul:nth-child(2)
     margin-right: 149px
+    +xxxl
+      margin-right: 80px
+    +xxl
+      margin-right: 70px
+    +xl
+      margin-right: 0
 
   &__list
     display: flex
@@ -108,6 +162,9 @@
     line-height: 125%
     letter-spacing: 0.44px
     color: $black
+    +lg
+      font-size: 18px
+      letter-spacing: 0.36px
 
   &__list li a
     font-weight: 400
@@ -115,6 +172,9 @@
     line-height: 125%
     letter-spacing: 0.44px
     color: $gray
+    +xxl
+      font-size: 18px
+      letter-spacing: 0.36px
     &:hover
       +min_md
         color: $hover
