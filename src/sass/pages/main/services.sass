@@ -1,6 +1,9 @@
 .services
   padding-top: 87px
   padding-bottom: 119px
+  +sm
+    padding-top: 56px
+    padding-bottom: 60px
 
   &__title
     margin-bottom: 39px
@@ -8,6 +11,8 @@
   &__content
 
   &__tab
+    +xl
+      display: none
 
 .tab
   background: #E8F2FC
@@ -30,8 +35,15 @@
       color: $green
       text-align: center
       padding: 30px 13px 5px 13px
+
       &:hover
-        color: $black
+        color: $green
+        +min_md
+          color: $black
+      +xxxl
+        font-size: 22px
+      +xxl
+        font-size: 18px
 
     &__link--active
       color: $black
@@ -48,8 +60,20 @@
 .item-content
   display: flex
   justify-content: space-between
+  +xl
+    flex-direction: column
+    align-items: center
 
-  &__box
+  &__box:first-child
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__box:last-child
+    display: flex
+    flex-direction: column
+    align-items: center
+    row-gap: 30px
 
   &__title
     font-size: 30px
@@ -58,6 +82,11 @@
     letter-spacing: 0.6px
     color: $black
     margin-bottom: 23px
+    +xl
+      text-align: center
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &__list
     display: flex
@@ -77,6 +106,9 @@
     color: $gray
     display: flex
     align-items: center
+    +sm
+      font-size: 16px
+      letter-spacing: 0.32px
 
   &__item span
     display: inline-block
@@ -85,6 +117,67 @@
     background: $accent-gt
     border-radius: 50%
     margin-right: 13px
+    flex-shrink: 0
 
   &__btn
     padding: 13px 36px
+
+.services
+
+  &__collapse
+    display: flex
+    flex-direction: column
+    row-gap: 10px
+
+  &__collapse-item
+    background: $bg
+    border-radius: 10px
+    padding: 22px 0 0
+
+  &__collapse-title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 20px 25px
+    cursor: pointer
+    user-select: none
+    column-gap: 5px
+    span
+      font-size: 18px
+      font-weight: 700
+      line-height: 115%
+      letter-spacing: 0.36px
+      color: $green
+      transition: all 0.3s ease
+
+    .arrow
+      width: 26px
+      height: 26px
+      border: 2px solid $blue
+      border-radius: 50%
+      position: relative
+      transition: all 0.3s ease
+
+      span
+        width: 6px
+        height: 6px
+        border: 2px solid $blue
+        border-width: 0 0 2px 2px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(-45deg)
+
+  &__collapse-title.active
+    span
+      color: $black
+    .arrow
+      transform: rotate(180deg)
+
+  &__collapse-text
+    background: #F6FAFF
+    border-radius: 0 0 10px 10px
+    padding: 27px 30px
+    display: none
+    +sm
+      padding: 27px 20px

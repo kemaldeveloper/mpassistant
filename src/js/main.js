@@ -247,6 +247,14 @@ const collapse = () => {
   });
 };
 
+const servicesCollapse = () => {
+  const collapseTitle = $('.services__collapse-title');
+  collapseTitle.on('click', function () {
+    $(this).toggleClass('active').next().slideToggle(300);
+    $(this).parent().toggleClass('active');
+  });
+};
+
 const showPassword = () => {
   const showBtn = $('.show-btn');
   const passwordInput = $('.password-input');
@@ -263,5 +271,6 @@ const showPassword = () => {
 $(document).ready(function () {
   textShow();
   collapse();
+  servicesCollapse();
   showPassword();
 });
