@@ -54,7 +54,7 @@ $('.js-menu').on('click', function () {
   $('.menu').toggleClass('is-opened');
 });
 
-$('.menu-hamburger').on('click', function () {
+$('.menu-close').on('click', function () {
   $('.js-menu').removeClass('is-active');
   $('.menu').removeClass('is-opened');
 });
@@ -130,7 +130,8 @@ const mfpPopup = function (popupID, source) {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close"><img src="assets/images/close.svg" alt=""></button>',
+    closeMarkup:
+      '<button type="button" class="mfp-close"><img src="assets/images/close.svg" alt=""><img src="assets/images/close-x.svg" alt=""></button>',
     mainClass: 'mfp-fade-zoom',
     // callbacks: {
     // 	open: function() {

@@ -43,7 +43,9 @@ p
   letter-spacing: 0.36px
   color: $black
   &:hover
-    color: $hover
+    color: $black
+    +min_md
+      color: $hover
 
 .title
   font-size: 46px
