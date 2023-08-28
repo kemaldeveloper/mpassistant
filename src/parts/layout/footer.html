@@ -103,7 +103,7 @@
         <span>Ваш email</span>
         <input type="email" name="email" data-name="Почта" placeholder="Введите ваш email" />
       </div>
-      <div class="log">
+      <div class="log d-lg-flex d-none">
         <span class="log-desc">Уже есть аккаунт?</span>
         <a href="#" class="log-link">
           <img src="assets/images/log.svg" alt="" />
@@ -138,7 +138,10 @@
             data-name="Промокод"
             placeholder="Введите промокод"
           />
-          <button class="promocode-btn btn">Применить</button>
+          <button class="promocode-btn d-sm-inline-block d-none btn">Применить</button>
+          <button class="promocode-btn d-sm-none d-inline-block btn">
+            <img src="assets/images/promocode-check.svg" alt="" />
+          </button>
         </div>
       </div>
       <div class="checkbox">
@@ -153,7 +156,16 @@
           <a href="#">политики конфиденциальности</a>
         </div>
       </div>
-      <button class="mfp__form-submit btn" type="submit">Получить бесплатный доступ</button>
+      <div class="mfp__form-bottom">
+        <button class="mfp__form-submit btn" type="submit">Получить бесплатный доступ</button>
+        <div class="log d-lg-none d-flex">
+          <span class="log-desc">Уже есть аккаунт?</span>
+          <a href="#" class="log-link">
+            <img src="assets/images/log.svg" alt="" />
+            <span>Вход</span>
+          </a>
+        </div>
+      </div>
     </div>
   </form>
 </div>
