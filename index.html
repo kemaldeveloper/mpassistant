@@ -39,11 +39,16 @@
         </div>
         <nav class="nav-menu">
           <ul class="nav-menu__list">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Возможности</a></li>
-            <li><a href="#">Тарифы</a></li>
+            <li><a href="#reports">О нас</a></li>
+            <li><a href="#services">Возможности</a></li>
+            <li><a href="#tariff">Тарифы</a></li>
           </ul>
         </nav>
+        <div class="hamburger hamburger--slider js-menu">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
       </div>
       <div class="header__box">
         <a href="#" class="log-link">
@@ -56,11 +61,36 @@
   </div>
 </header>
 
-<!-- <div class="hamburger hamburger--slider js-menu">
-  <div class="hamburger-box">
-    <div class="hamburger-inner"></div>
+<div class="menu">
+  <div class="menu__header">
+    <a href="/" class="logo">
+      <img src="assets/images/logo.svg" alt="" />
+    </a>
+    <div class="menu-hamburger">
+      <span></span>
+      <span></span>
+    </div>
   </div>
-</div> -->
+  <nav class="nav-menu">
+    <ul class="nav-menu__list">
+      <li><a href="#reports">О нас</a></li>
+      <li><a href="#services">Возможности</a></li>
+      <li><a href="#tariff">Тарифы</a></li>
+    </ul>
+  </nav>
+  <div class="menu__footer">
+    <a href="#registration" class="btn js-popup">Зарегистрироваться</a>
+    <div class="menu__footer-box">
+      <div class="menu__footer-desc">
+        <span>Уже есть аккаунт?</span>
+      </div>
+      <a href="#" class="log-link">
+        <img src="assets/images/log.svg" alt="" />
+        <span>Войти</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 
       <main class="main">
@@ -80,7 +110,7 @@
         <div class="advantages__text">
           <p>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
         </div>
-        <div class="try">
+        <div class="advantages__try try">
           <div class="try__text">
             <p>Начните свой 3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
           </div>
@@ -131,7 +161,7 @@
 
 
   <!-- section count -->
-  <section class="services">
+  <section id="services" class="services">
   <div class="container">
     <h1 class="services__title title">Возможности сервиса</h1>
     <div class="services__content">
@@ -260,6 +290,8 @@
   </div>
 </section>
 
+<!-- try block -->
+
 
 
 
@@ -267,27 +299,25 @@
 
 
 <div class="container">
-  <div class="try d-flex">
+  <div class="try try--modified d-flex">
     <div class="try__title">Начните экономить своё время</div>
     <div class="try__text">
       <p>3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
     </div>
     <form action="#" method="get" class="try-form">
-      <div class="try-form__content d-inline-flex">
+      <div class="try-form__content d-md-inline-flex d-flex">
         <input class="try-form-input" type="email" name="email" placeholder="Введите ваш email" />
         <button class="try-form-btn btn">Попробовать</button>
       </div>
     </form>
-    <div class='try__img'><img src='assets/images/try/try-1.png' /></div>
+    <div class='try__img try__img--small'><img src='assets/images/try/try-1.png' /></div>
   </div>
 </div>
 
 
 
-  <!-- block try -->
-
   <!-- section reports -->
-  <section class="reports">
+  <section id="reports" class="reports">
   <div class="container">
     <h2 class="reports__title title">Собираем единые отчёты по всем вашим магазинам</h2>
     <div class="reports__description">C Mpassistant вы сможете:</div>
@@ -320,10 +350,9 @@
           </div>
         </div>
       </div>
-      <div class="reports__col">
-        <div class="reports__img">
-          <img src="assets/images/reports/reports-img.png" alt="" />
-        </div>
+      <div class="reports__img">
+        <img src="assets/images/reports/reports-img.png" alt="" />
+        <img src="assets/images/reports/reports-img-2.png" alt="" />
       </div>
     </div>
   </div>
@@ -429,6 +458,8 @@
   </div>
 </section>
 
+<!-- try block -->
+
 
 
 
@@ -436,25 +467,25 @@
 
 
 <div class="container">
-  <div class="try d-flex">
+  <div class="try try--modified d-flex">
     <div class="try__title">Попробуйте бесплатно</div>
     <div class="try__text">
       <p>3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
     </div>
     <form action="#" method="get" class="try-form">
-      <div class="try-form__content d-inline-flex">
+      <div class="try-form__content d-md-inline-flex d-flex">
         <input class="try-form-input" type="email" name="email" placeholder="Введите ваш email" />
         <button class="try-form-btn btn">Попробовать</button>
       </div>
     </form>
-    <div class='try__img' style='bottom: -23%'><img src='assets/images/try/try-2.png' /></div>
+    <div class='try__img try__img--big'><img src='assets/images/try/try-2.png' /></div>
   </div>
 </div>
 
 
 
   <!-- section tariff -->
-  <section class="tariff">
+  <section id="tariff" class="tariff">
   <div class="container">
     <h2 class="tariff__title title">Выберите тариф</h2>
     <div class="tariff__content">
@@ -492,7 +523,7 @@
               <h5>Стартовый +</h5>
             </div>
             <div class="sale">
-              <span>—10%</span>
+              <span>— 10%</span>
             </div>
           </div>
           <div class="tariff__item-prices">
@@ -516,7 +547,7 @@
               <h5>Профи</h5>
             </div>
             <div class="sale">
-              <span>—10%</span>
+              <span>— 15%</span>
             </div>
           </div>
           <div class="tariff__item-prices">
@@ -673,6 +704,7 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
