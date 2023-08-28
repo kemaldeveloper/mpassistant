@@ -187,6 +187,22 @@ new Swiper('.swiper', {
     nextEl: '.feedbacks-next',
     prevEl: '.feedbacks-prev',
   },
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    },
+    768: {
+      pagination: false,
+    },
+    0: {
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    },
+  },
 });
 
 const text = $('.feedbacks__text p');

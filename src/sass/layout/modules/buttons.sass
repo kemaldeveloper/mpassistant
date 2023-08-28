@@ -113,6 +113,9 @@
   margin: 17px 0 23px
   cursor: pointer
   align-self: flex-start
+  +sm
+    font-size: 18px
+    letter-spacing: 0.36px
   &::after
     content: ''
     position: absolute
@@ -123,6 +126,8 @@
     border-width: 0 0 2px 2px
     width: 8px
     height: 8px
+    +sm
+      transform: translateY(-55%) rotate(-45deg)
 
 #moreText.active
   &::after
